@@ -1,10 +1,13 @@
 import React from "react"
-export default function Titulo(info){
-    console.log(info)
-    return (
-        <>
-            <h1>{info.princal}</h1>
-            <h2>Subtitulo</h2>
-        </>
-    )
+export default function Titulo(props){
+        return props.pequeno ? (
+            <>
+                <p>{props.Princial}</p>
+                <p>{props.secundario}</p>
+            </>
+        ) :
+            <>
+                <h1>{props.Princial}</h1>
+                <h2>{props.secundario}</h2>
+            </>
 }
